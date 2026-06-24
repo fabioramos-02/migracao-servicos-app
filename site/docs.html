@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentação | SETDIG</title>
+
+  <!-- Design System MS -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/ds-sis.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  
+  <style>
+    .docs-container {
+      background: var(--color-neutral-white);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    
+    .docs-content h1, .docs-content h2, .docs-content h3 {
+      color: var(--color-primary-700);
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .docs-content h1 { font-size: 2rem; border-bottom: 1px solid var(--color-neutral-200); padding-bottom: 8px; }
+    .docs-content h2 { font-size: 1.5rem; }
+    .docs-content p { color: var(--color-neutral-700); margin-bottom: 1em; line-height: 1.6; }
+    .docs-content ul, .docs-content ol { margin-left: 20px; margin-bottom: 1em; color: var(--color-neutral-700); }
+    .docs-content code { background: var(--color-neutral-100); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    .docs-content pre { background: var(--color-neutral-100); padding: 16px; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; }
+    .docs-content blockquote { border-left: 4px solid var(--color-primary-500); padding-left: 16px; color: var(--color-neutral-500); margin-left: 0; }
+    .docs-content table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    .docs-content th, .docs-content td { border: 1px solid var(--color-neutral-200); padding: 8px 12px; }
+    .docs-content th { background: var(--color-primary-100); text-align: left; }
+    
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--color-primary-600); font-weight: 600; text-decoration: none; margin-bottom: 16px;
+    }
+    .back-link:hover { color: var(--color-primary-700); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="ds-header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo-ms.svg" alt="Governo de Mato Grosso do Sul" />
+      <span class="brand-sub">SETDIG · Secretaria-Executiva de Transformação Digital</span>
+    </div>
+    <div class="right">
+      <span class="version">PGD-MS · X-VIA</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="docs-container">
+      <a href="index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar para o painel principal
+      </a>
+      
+      <div id="loading" style="padding: 40px; text-align: center; color: var(--color-neutral-500);">Carregando documento...</div>
+      
+      <div id="docs-content" class="docs-content" style="display: none;"></div>
+    </div>
+  </main>
+
+  <footer class="ds-footer">
+    <div class="wrap">SETDIG — Secretaria-Executiva de Transformação Digital · gerado do Swagger do gateway msdigital-gateway.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>
