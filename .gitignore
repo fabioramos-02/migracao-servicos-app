@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporários
+*.tmp
+_*.py
+
+# Spec capturado pode conter info sensível do gateway — versionar conscientemente.
+# Descomente para NÃO versionar o spec:
+# data/openapi.json
