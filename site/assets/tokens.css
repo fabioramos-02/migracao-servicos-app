@@ -1,0 +1,122 @@
+/**
+ * Do not edit directly
+ * Generated on Sat, 20 Jun 2026 18:33:03 GMT
+ */
+
+:root {
+  --tag-warning-background: #FFE0CC; /* tint alerta — valor direto do Figma, fora da escala atual */
+  --tag-success-background: #D0E8D6; /* tint sucesso — valor direto do Figma, fora da escala atual */
+  --tag-height: 24px;
+  --tag-radius: 4px;
+  --selection-toggle-height: 20px;
+  --selection-toggle-width: 40px;
+  --selection-radio-size: 20px;
+  --selection-checkbox-radius: 4px;
+  --selection-checkbox-size: 24px;
+  --search-font-size: 14px;
+  --search-radius: 2px;
+  --search-height: 32px;
+  --notification-warning-background: #FFE0CC; /* tint alerta — valor direto do Figma */
+  --notification-success-background: #E2F1E6; /* tint sucesso — valor direto do Figma */
+  --notification-radius: 4px;
+  --input-helper-font-size: 10px;
+  --input-label-font-weight: 700;
+  --input-label-font-size: 16px;
+  --input-font-size: 14px;
+  --input-padding-x: 16px;
+  --input-height: 48px;
+  --input-radius: 2px;
+  --header-gap: 32px;
+  --header-padding-x: 112px;
+  --header-height: 96px;
+  --color-content-on-brand: #ffffff; /* texto sobre superfície de marca */
+  --color-info-700: #011f33;
+  --color-info-600: #0d99f7;
+  --color-info-500: #067bcc;
+  --color-info-400: #67ace4;
+  --color-info-300: #77affd;
+  --color-info-200: #b2d5f4;
+  --color-info-100: #cdebff;
+  --color-support-700: #331a09;
+  --color-support-500: #ff5e40;
+  --color-warning-700: #331a09;
+  --color-warning-500: #ff6200;
+  --color-success-700: #08210f;
+  --color-success-500: #198038;
+  --color-error-800: #2a0709;
+  --color-error-700: #540f12;
+  --color-error-600: #7f161a;
+  --color-error-500: #da1e28;
+  --color-error-400: #c83d42;
+  --color-error-300: #bd5458;
+  --color-error-200: #eda8ab;
+  --color-error-100: #f6d3d5;
+  --color-neutral-white: #ffffff;
+  --color-neutral-1000: #0a0909;
+  --color-neutral-950: #080b0c;
+  --color-neutral-900: #101518;
+  --color-neutral-800: #192025;
+  --color-neutral-700: #212a31;
+  --color-neutral-600: #29353d;
+  --color-neutral-500: #545d64;
+  --color-neutral-400: #6e757a;
+  --color-neutral-300: #a9aeb1;
+  --color-neutral-200: #d4d7d8;
+  --color-neutral-100: #eaebec;
+  --color-primary-700: #002040;
+  --color-primary-600: #002f5f;
+  --color-primary-500: #004f9f; /* azul institucional MS — marca */
+  --color-primary-400: #3372b2;
+  --color-primary-300: #6695c5;
+  --color-primary-200: #99b9d9;
+  --color-primary-100: #ccdcec; /* tint azul */
+  --card-padding: 16px;
+  --card-radius: 8px;
+  --button-size-lg-font-size: 16px;
+  --button-size-lg-padding-x: 24px;
+  --button-size-lg-height: 48px;
+  --button-size-md-font-size: 14px;
+  --button-size-md-padding-x: 16px;
+  --button-size-md-height: 40px;
+  --button-size-sm-font-size: 16px;
+  --button-size-sm-padding-x: 16px;
+  --button-size-sm-height: 32px;
+  --button-font-weight: 700;
+  --button-radius: 4px;
+  --tag-info-text: var(--color-info-700);
+  --tag-info-background: var(--color-info-100);
+  --tag-warning-text: var(--color-warning-700);
+  --tag-error-text: var(--color-error-700);
+  --tag-error-background: var(--color-error-100);
+  --tag-success-text: var(--color-success-700);
+  --tag-default-text: var(--color-primary-600);
+  --tag-default-background: var(--color-primary-100);
+  --selection-toggle-track-on: var(--color-primary-500);
+  --selection-toggle-track-off: var(--color-neutral-300);
+  --selection-radio-checked-border: var(--color-primary-500);
+  --selection-checkbox-checked-background: var(--color-info-500);
+  --selection-checkbox-border: var(--color-neutral-300);
+  --search-border: var(--color-primary-300);
+  --notification-warning-border: var(--color-warning-500);
+  --notification-warning-text: var(--color-warning-700);
+  --notification-error-border: var(--color-error-500);
+  --notification-error-text: var(--color-error-700);
+  --notification-error-background: var(--color-error-100);
+  --notification-success-border: var(--color-success-500);
+  --notification-success-text: var(--color-success-700);
+  --notification-info-border: var(--color-info-500);
+  --notification-info-text: var(--color-info-700);
+  --notification-info-background: var(--color-info-100);
+  --input-border-error: var(--color-error-500);
+  --input-border-focus: var(--color-primary-500);
+  --input-border-hover: var(--color-neutral-500);
+  --input-border-default: var(--color-neutral-300);
+  --card-link-title-color: var(--color-neutral-1000);
+  --card-link-border-hover: var(--color-primary-300);
+  --card-link-border: var(--color-primary-200);
+  --card-border: var(--color-neutral-100);
+  --button-primary-text: var(--color-content-on-brand);
+  --button-primary-background-active: var(--color-primary-700);
+  --button-primary-background-hover: var(--color-primary-600);
+  --button-primary-background-default: var(--color-primary-500);
+}

@@ -1,0 +1,541 @@
+/* ============================================================================
+   DS-MS — ds-sis.css (GERADO por scripts/build-css.js — não edite à mão)
+   Tokens + todos os componentes, nessa ordem.
+   ============================================================================ */
+
+/**
+ * Do not edit directly
+ * Generated on Sat, 20 Jun 2026 18:33:03 GMT
+ */
+
+:root {
+  --tag-warning-background: #FFE0CC; /* tint alerta — valor direto do Figma, fora da escala atual */
+  --tag-success-background: #D0E8D6; /* tint sucesso — valor direto do Figma, fora da escala atual */
+  --tag-height: 24px;
+  --tag-radius: 4px;
+  --selection-toggle-height: 20px;
+  --selection-toggle-width: 40px;
+  --selection-radio-size: 20px;
+  --selection-checkbox-radius: 4px;
+  --selection-checkbox-size: 24px;
+  --search-font-size: 14px;
+  --search-radius: 2px;
+  --search-height: 32px;
+  --notification-warning-background: #FFE0CC; /* tint alerta — valor direto do Figma */
+  --notification-success-background: #E2F1E6; /* tint sucesso — valor direto do Figma */
+  --notification-radius: 4px;
+  --input-helper-font-size: 10px;
+  --input-label-font-weight: 700;
+  --input-label-font-size: 16px;
+  --input-font-size: 14px;
+  --input-padding-x: 16px;
+  --input-height: 48px;
+  --input-radius: 2px;
+  --header-gap: 32px;
+  --header-padding-x: 112px;
+  --header-height: 96px;
+  --color-content-on-brand: #ffffff; /* texto sobre superfície de marca */
+  --color-info-700: #011f33;
+  --color-info-600: #0d99f7;
+  --color-info-500: #067bcc;
+  --color-info-400: #67ace4;
+  --color-info-300: #77affd;
+  --color-info-200: #b2d5f4;
+  --color-info-100: #cdebff;
+  --color-support-700: #331a09;
+  --color-support-500: #ff5e40;
+  --color-warning-700: #331a09;
+  --color-warning-500: #ff6200;
+  --color-success-700: #08210f;
+  --color-success-500: #198038;
+  --color-error-800: #2a0709;
+  --color-error-700: #540f12;
+  --color-error-600: #7f161a;
+  --color-error-500: #da1e28;
+  --color-error-400: #c83d42;
+  --color-error-300: #bd5458;
+  --color-error-200: #eda8ab;
+  --color-error-100: #f6d3d5;
+  --color-neutral-white: #ffffff;
+  --color-neutral-1000: #0a0909;
+  --color-neutral-950: #080b0c;
+  --color-neutral-900: #101518;
+  --color-neutral-800: #192025;
+  --color-neutral-700: #212a31;
+  --color-neutral-600: #29353d;
+  --color-neutral-500: #545d64;
+  --color-neutral-400: #6e757a;
+  --color-neutral-300: #a9aeb1;
+  --color-neutral-200: #d4d7d8;
+  --color-neutral-100: #eaebec;
+  --color-primary-700: #002040;
+  --color-primary-600: #002f5f;
+  --color-primary-500: #004f9f; /* azul institucional MS — marca */
+  --color-primary-400: #3372b2;
+  --color-primary-300: #6695c5;
+  --color-primary-200: #99b9d9;
+  --color-primary-100: #ccdcec; /* tint azul */
+  --card-padding: 16px;
+  --card-radius: 8px;
+  --button-size-lg-font-size: 16px;
+  --button-size-lg-padding-x: 24px;
+  --button-size-lg-height: 48px;
+  --button-size-md-font-size: 14px;
+  --button-size-md-padding-x: 16px;
+  --button-size-md-height: 40px;
+  --button-size-sm-font-size: 16px;
+  --button-size-sm-padding-x: 16px;
+  --button-size-sm-height: 32px;
+  --button-font-weight: 700;
+  --button-radius: 4px;
+  --tag-info-text: var(--color-info-700);
+  --tag-info-background: var(--color-info-100);
+  --tag-warning-text: var(--color-warning-700);
+  --tag-error-text: var(--color-error-700);
+  --tag-error-background: var(--color-error-100);
+  --tag-success-text: var(--color-success-700);
+  --tag-default-text: var(--color-primary-600);
+  --tag-default-background: var(--color-primary-100);
+  --selection-toggle-track-on: var(--color-primary-500);
+  --selection-toggle-track-off: var(--color-neutral-300);
+  --selection-radio-checked-border: var(--color-primary-500);
+  --selection-checkbox-checked-background: var(--color-info-500);
+  --selection-checkbox-border: var(--color-neutral-300);
+  --search-border: var(--color-primary-300);
+  --notification-warning-border: var(--color-warning-500);
+  --notification-warning-text: var(--color-warning-700);
+  --notification-error-border: var(--color-error-500);
+  --notification-error-text: var(--color-error-700);
+  --notification-error-background: var(--color-error-100);
+  --notification-success-border: var(--color-success-500);
+  --notification-success-text: var(--color-success-700);
+  --notification-info-border: var(--color-info-500);
+  --notification-info-text: var(--color-info-700);
+  --notification-info-background: var(--color-info-100);
+  --input-border-error: var(--color-error-500);
+  --input-border-focus: var(--color-primary-500);
+  --input-border-hover: var(--color-neutral-500);
+  --input-border-default: var(--color-neutral-300);
+  --card-link-title-color: var(--color-neutral-1000);
+  --card-link-border-hover: var(--color-primary-300);
+  --card-link-border: var(--color-primary-200);
+  --card-border: var(--color-neutral-100);
+  --button-primary-text: var(--color-content-on-brand);
+  --button-primary-background-active: var(--color-primary-700);
+  --button-primary-background-hover: var(--color-primary-600);
+  --button-primary-background-default: var(--color-primary-500);
+}
+
+
+/* ---- componente: button ---- */
+
+/* ============================================================================
+   DS-MS — Button (POC)
+   Consome os tokens GERADOS pelo Style Dictionary (dist/css/tokens.css).
+   Base reaproveitada de components.css da raiz (.btn / .btn-primary / ...).
+   ============================================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: var(--button-font-weight);
+  border-radius: var(--button-radius);
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .05s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* Foco visível — requisito de acessibilidade (eMAG/WCAG: foco perceptível).
+   Cor igual ao root colors_and_type.css: var(--color-info-600). */
+.btn:focus-visible {
+  outline: 2px solid var(--color-info-600);
+  outline-offset: 2px;
+}
+.btn:active { transform: translateY(1px); }
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Tamanhos */
+.btn-sm { height: var(--button-size-sm-height); padding: 0 var(--button-size-sm-padding-x); font-size: var(--button-size-sm-font-size); }
+.btn-md { height: var(--button-size-md-height); padding: 0 var(--button-size-md-padding-x); font-size: var(--button-size-md-font-size); }
+.btn-lg { height: var(--button-size-lg-height); padding: 0 var(--button-size-lg-padding-x); font-size: var(--button-size-lg-font-size); }
+
+/* Variante: primária */
+.btn-primary {
+  background: var(--button-primary-background-default);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-background-default);
+}
+.btn-primary:hover  { background: var(--button-primary-background-hover);  border-color: var(--button-primary-background-hover); }
+.btn-primary:active { background: var(--button-primary-background-active); border-color: var(--button-primary-background-active); }
+
+/* Variante: secundária (outline) */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+.btn-secondary:hover  { background: rgba(0, 79, 159, .06); }
+.btn-secondary:active { background: rgba(0, 79, 159, .12); }
+
+/* Variante: simples (link) */
+.btn-simple {
+  background: transparent;
+  color: var(--color-primary-500);
+  border-color: transparent;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.btn-simple:hover { color: var(--color-primary-600); text-decoration: underline; }
+
+/* Variante: perigo */
+.btn-danger {
+  background: var(--color-error-500);
+  color: #fff;
+  border-color: var(--color-error-500);
+}
+.btn-danger:hover  { background: var(--color-error-600); border-color: var(--color-error-600); }
+.btn-danger:active { background: var(--color-error-700); border-color: var(--color-error-700); }
+
+/* ---- componente: card ---- */
+
+/* DS-MS — Card (POC). Fiel a .card/.card-link de components.css (raiz). */
+.card {
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+}
+.card-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  border: 1px solid var(--card-link-border);
+  border-radius: var(--card-radius);
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .15s ease, transform .12s ease, border-color .15s ease;
+}
+.card-link:hover {
+  box-shadow: var(--shadow-4, 0px 4px 8px 0px rgba(0,32,64,.3));
+  border-color: var(--card-link-border-hover);
+}
+.card-link:focus-visible { outline: 2px solid var(--color-info-600); outline-offset: 2px; }
+.card-link .card-link-title {
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--card-link-title-color);
+}
+.card-link .card-link-body {
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-neutral-500);
+}
+
+/* ---- componente: footer ---- */
+
+/* DS-MS — Footer (POC). Fiel a .ds-footer de components.css (raiz). CSS+HTML — sem comportamento. */
+.ds-footer {
+  height: var(--header-height);
+  background: var(--color-primary-500);
+  display: flex; align-items: center;
+  padding: 0 var(--header-padding-x);
+  color: #fff;
+}
+.ds-footer .footer-logo { margin-left: auto; height: 60px; width: 140px; background: rgba(255,255,255,.25); border-radius: 4px; }
+
+/* ---- componente: header ---- */
+
+/* ============================================================================
+   DS-MS — Header (POC). Fiel a .ds-header de components.css (raiz).
+   1º Web Component do DS-MS (ms-header) — comportamento de menu mobile
+   centralizado aqui, ver ms-header.js. Modelo híbrido: docs/01-arquitetura.md.
+   ============================================================================ */
+.ds-header {
+  position: relative;
+  display: flex; align-items: center;
+  height: var(--header-height);
+  padding: 0 var(--header-padding-x);
+  background: var(--color-primary-500);
+  color: #fff;
+  gap: var(--header-gap);
+}
+.ds-header .brand { display: flex; align-items: center; gap: 0; }
+.ds-header .brand .ds-ms-logo { height: 32px; width: 110px; background: rgba(255,255,255,.25); border-radius: 4px; }
+.ds-header .brand .brand-sub {
+  font-family: "Open Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #fff;
+  margin-left: 8px;
+  white-space: pre-line;
+}
+.ds-header nav {
+  display: flex; gap: 24px;
+  font-family: "Open Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+.ds-header nav a { color: #fff; text-decoration: none; }
+.ds-header nav a:hover { text-decoration: underline; }
+.ds-header nav a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.ds-header .right { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+.ds-header .version {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: "Roboto", system-ui, sans-serif; font-weight: 700; font-size: 12px;
+}
+
+/* Botão de menu — só aparece em telas estreitas (ou .is-mobile para demo no Storybook) */
+.ds-header .menu-toggle {
+  display: none;
+  margin-left: auto;
+  background: transparent; border: 0; color: #fff; cursor: pointer; padding: 4px;
+}
+.ds-header .menu-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .ds-header { padding: 0 16px; gap: 16px; }
+  .ds-header nav { display: none; }
+  .ds-header nav.is-open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--color-primary-600);
+    padding: 16px; gap: 16px;
+  }
+  .ds-header .right { display: none; }
+  .ds-header .menu-toggle { display: inline-flex; }
+}
+
+/* Classe gêmea do @media — permite demonstrar o estado mobile no Storybook
+   independente da largura real do iframe de preview. */
+.ds-header.is-mobile { padding: 0 16px; gap: 16px; }
+.ds-header.is-mobile nav { display: none; }
+.ds-header.is-mobile nav.is-open {
+  display: flex; flex-direction: column;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: var(--color-primary-600);
+  padding: 16px; gap: 16px;
+}
+.ds-header.is-mobile .right { display: none; }
+.ds-header.is-mobile .menu-toggle { display: inline-flex; }
+
+/* ---- componente: input ---- */
+
+/* ============================================================================
+   DS-MS — Input (POC)
+   Fiel a .field* de components.css (raiz). Consome tokens gerados em dist/css.
+   ============================================================================ */
+.field { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.field-label {
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: var(--input-label-font-weight);
+  font-size: var(--input-label-font-size);
+  line-height: 24px;
+  color: var(--color-neutral-700);
+}
+.field-input,
+.field-textarea,
+.field-select {
+  width: 100%;
+  height: var(--input-height);
+  padding: 0 var(--input-padding-x);
+  background: #fff;
+  border: 1px solid var(--input-border-default);
+  border-radius: var(--input-radius);
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: var(--input-font-size);
+  line-height: 20px;
+  color: var(--color-neutral-700);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.field-input::placeholder,
+.field-textarea::placeholder { color: var(--color-neutral-300); }
+.field-input:hover,
+.field-textarea:hover,
+.field-select:hover { border-color: var(--input-border-hover); }
+.field-input:focus,
+.field-textarea:focus,
+.field-select:focus {
+  outline: none;
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 2px rgba(0, 79, 159, .15);
+}
+.field-textarea { height: auto; min-height: 96px; padding: 12px var(--input-padding-x); resize: vertical; line-height: 20px; }
+.field-input[disabled],
+.field-textarea[disabled] {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-300);
+  cursor: not-allowed;
+}
+.field-input.is-error,
+.field-textarea.is-error {
+  border-color: var(--input-border-error);
+  box-shadow: 0 0 0 2px rgba(218, 30, 40, .15);
+}
+.field-helper { font-size: var(--input-helper-font-size); line-height: 12px; color: var(--color-neutral-500); }
+.field-helper.is-error { color: var(--color-error-500); }
+
+/* ---- componente: link ---- */
+
+/* DS-MS — Link (POC). Fiel a .link de components.css (raiz). */
+.link {
+  color: var(--color-info-600);
+  font-family: "Roboto", system-ui, sans-serif;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.link:hover { text-decoration: underline; color: var(--color-primary-600); }
+.link:focus-visible { outline: 2px solid var(--color-info-600); outline-offset: 2px; }
+
+/* ---- componente: notification ---- */
+
+/* DS-MS — Notification/Banner (POC). Fiel a .notification* de components.css (raiz). */
+.notification {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--notification-radius);
+  border-left: 4px solid var(--notification-info-border);
+  background: var(--notification-info-background);
+  color: var(--notification-info-text);
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.notification.is-success { background: var(--notification-success-background); border-left-color: var(--notification-success-border); color: var(--notification-success-text); }
+.notification.is-error   { background: var(--notification-error-background);   border-left-color: var(--notification-error-border);   color: var(--notification-error-text); }
+.notification.is-warning { background: var(--notification-warning-background); border-left-color: var(--notification-warning-border); color: var(--notification-warning-text); }
+
+/* ---- componente: search ---- */
+
+/* ============================================================================
+   DS-MS — Search (POC). Fiel a .search de components.css (Property1BuscarFocusSmall).
+   ============================================================================ */
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--search-height);
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid var(--search-border);
+  border-radius: var(--search-radius);
+  color: var(--color-neutral-500);
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 10px;
+  line-height: 16px;
+}
+.search input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: var(--search-font-size);
+  color: var(--color-neutral-700);
+}
+.search input::placeholder { color: var(--color-neutral-300); }
+.search svg { color: var(--color-neutral-500); flex: none; }
+.search:focus-within {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 2px rgba(0, 79, 159, .15);
+}
+
+/* ---- componente: selection ---- */
+
+/* ============================================================================
+   DS-MS — Checkbox / Radio / Toggle (POC). Fiel a components.css (raiz).
+   ============================================================================ */
+.checkbox {
+  appearance: none;
+  width: var(--selection-checkbox-size); height: var(--selection-checkbox-size);
+  border-radius: var(--selection-checkbox-radius);
+  border: 1px solid var(--selection-checkbox-border);
+  background: #fff;
+  display: inline-grid; place-items: center;
+  cursor: pointer;
+  transition: background-color .12s ease, border-color .12s ease;
+}
+.checkbox:hover { border-color: var(--color-primary-500); }
+.checkbox:focus-visible { outline: 2px solid var(--color-info-600); outline-offset: 2px; }
+.checkbox:checked {
+  background: var(--selection-checkbox-checked-background);
+  border-color: var(--selection-checkbox-checked-background);
+}
+.checkbox:checked::after {
+  content: "";
+  width: 14px; height: 10px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none'><path d='M13.7 1.7a1 1 0 0 0-1.4-1.4L5 7.6 1.7 4.3A1 1 0 0 0 .3 5.7l4 4a1 1 0 0 0 1.4 0l8-8z' fill='white'/></svg>") center/contain no-repeat;
+}
+
+.radio {
+  appearance: none;
+  width: var(--selection-radio-size); height: var(--selection-radio-size);
+  border-radius: 50%;
+  border: 1px solid var(--selection-checkbox-border);
+  background: #fff;
+  display: inline-grid; place-items: center;
+  cursor: pointer;
+}
+.radio:focus-visible { outline: 2px solid var(--color-info-600); outline-offset: 2px; }
+.radio:checked { border-color: var(--selection-radio-checked-border); border-width: 2px; }
+.radio:checked::after {
+  content: ""; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--selection-radio-checked-border);
+}
+
+.toggle {
+  appearance: none;
+  width: var(--selection-toggle-width); height: var(--selection-toggle-height);
+  background: var(--selection-toggle-track-off);
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+.toggle:focus-visible { outline: 2px solid var(--color-info-600); outline-offset: 2px; }
+.toggle::after {
+  content: "";
+  position: absolute;
+  left: 2px; top: 2px;
+  width: 16px; height: 16px;
+  background: #fff; border-radius: 50%;
+  transition: transform .15s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.toggle:checked { background: var(--selection-toggle-track-on); }
+.toggle:checked::after { transform: translateX(20px); }
+
+/* ---- componente: tag ---- */
+
+/* DS-MS — Tag/Badge (POC). Fiel a .tag* de components.css (raiz). */
+.tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: var(--tag-height);
+  padding: 0 8px;
+  border-radius: var(--tag-radius);
+  background: var(--tag-default-background);
+  color: var(--tag-default-text);
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+.tag-success { background: var(--tag-success-background); color: var(--tag-success-text); }
+.tag-error   { background: var(--tag-error-background);   color: var(--tag-error-text); }
+.tag-warning { background: var(--tag-warning-background); color: var(--tag-warning-text); }
+.tag-info    { background: var(--tag-info-background);    color: var(--tag-info-text); }

@@ -41,7 +41,8 @@ Abrir `site/index.html` direto no navegador (estático, sem build).
 ## Status
 
 - [x] Estrutura GCS + estudo da estratégia + pauta
-- [ ] Captura do `openapi.json` (pendente — destravar acesso ao gateway)
-- [ ] Inventário de endpoints preenchido a partir do spec
-- [ ] Dados de uso do BI integrados à priorização
-- [ ] Página HTML com Design System MS
+- [x] Captura do spec (`data/swagger.json` — OpenAPI 2.0, 120 endpoints, 21 serviços, auth keycloak)
+- [x] Inventário de endpoints preenchido a partir do spec
+- [x] Página HTML com Design System MS (`site/index.html`)
+- [ ] Dados de uso do BI integrados à priorização (pendente — BI gated)
+- [ ] Repositório remoto + push (pendente — criar repo GitHub)

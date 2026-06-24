@@ -1,0 +1,23 @@
+{
+  "name": "migracao-servicos-app",
+  "version": "1.0.0",
+  "description": "> Secretaria-Executiva de Transformação Digital — SETDIG > Levantamento e estudo da migração das APIs do gateway **MS Digital** (`msdigital-gateway`) > para reconstrução na plataforma da X-VIA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioramos-02/migracao-servicos-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabioramos-02/migracao-servicos-app/issues"
+  },
+  "homepage": "https://github.com/fabioramos-02/migracao-servicos-app#readme",
+  "dependencies": {
+    "@design-system-ms/ds-sis": "^0.1.0"
+  }
+}
