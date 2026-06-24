@@ -179,6 +179,14 @@ code { font-family: "Cascadia Code", Consolas, monospace; font-size: .82em; colo
 
 /* ===== Responsivo: tabela vira cards em telas estreitas ===== */
 @media (max-width: 720px) {
+  /* Header flex wrap and smaller logo */
+  .ds-header { flex-wrap: wrap; gap: 12px; justify-content: center; text-align: center; }
+  .ds-header .brand { flex-direction: column; gap: 8px; justify-content: center; width: 100%; }
+  .ds-header .brand-logo { height: 48px; margin: 0 auto; }
+  .ds-header .brand-sub { max-width: 100%; font-size: 0.85rem; }
+  .ds-header .right { width: 100%; text-align: center; margin-top: 4px; }
+
+  /* Tabela */
   thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
   table, tbody, tr, td { display: block; width: 100%; }
   .tabela-wrap { overflow: visible; border: 0; background: transparent; }
@@ -188,6 +196,18 @@ code { font-family: "Cascadia Code", Consolas, monospace; font-size: .82em; colo
   }
   tbody td { border-top: 0; display: grid; grid-template-columns: 92px 1fr; gap: 8px; padding: 6px 12px; }
   tbody td::before { content: attr(data-label); font-weight: 700; color: var(--color-neutral-500); font-size: .78rem; }
-  .bar-row { grid-template-columns: 120px 1fr 34px; }
+  
+  /* Barras (Priorização) stacked no mobile */
+  .bar-row { 
+    grid-template-columns: 1fr 45px; 
+    grid-template-rows: auto auto;
+    padding: 12px; 
+    gap: 8px; 
+  }
+  .bar-row .svc { grid-column: 1 / -1; margin-bottom: 2px; }
+  .bar-track { grid-column: 1; grid-row: 2; align-self: center; }
+  .bar-num { grid-column: 2; grid-row: 2; font-size: 0.8rem; padding: 2px 6px; }
+
+  /* Filtros */
   .filtros .acoes { margin-left: 0; width: 100%; justify-content: space-between; }
 }
