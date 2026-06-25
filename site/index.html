@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/ds-sis.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
 </head>
+
 <body>
   <!-- Header — markup .ds-header do DS-MS -->
   <header class="ds-header">
@@ -18,21 +20,24 @@
       <span class="brand-sub">SETDIG · Secretaria-Executiva de Transformação Digital</span>
     </div>
     <div class="right">
-      <span class="version">PGD-MS · X-VIA</span>
     </div>
   </header>
 
   <div class="app-tagline">
-    <div class="wrap">Migração das APIs do MS Digital → X-VIA · levantamento do contrato, priorização e estratégia.</div>
+    <div class="wrap">Migração das APIs do MS Digital → X-VIA · levantamento do contrato, priorização e estratégia.
+    </div>
   </div>
 
   <!-- Abas -->
   <nav class="tabs" aria-label="Seções do relatório">
     <div class="wrap" role="tablist">
       <button class="tab" role="tab" id="tab-resumo" aria-controls="p-resumo" aria-selected="true">Resumo</button>
-      <button class="tab" role="tab" id="tab-estrategia" aria-controls="p-estrategia" aria-selected="false">Estratégia</button>
-      <button class="tab" role="tab" id="tab-inventario" aria-controls="p-inventario" aria-selected="false">Inventário</button>
-      <button class="tab" role="tab" id="tab-prioriz" aria-controls="p-prioriz" aria-selected="false">Priorização</button>
+      <button class="tab" role="tab" id="tab-estrategia" aria-controls="p-estrategia"
+        aria-selected="false">Estratégia</button>
+      <button class="tab" role="tab" id="tab-inventario" aria-controls="p-inventario"
+        aria-selected="false">Inventário</button>
+      <button class="tab" role="tab" id="tab-prioriz" aria-controls="p-prioriz"
+        aria-selected="false">Priorização</button>
       <button class="tab" role="tab" id="tab-refs" aria-controls="p-refs" aria-selected="false">Referências</button>
     </div>
   </nav>
@@ -48,46 +53,60 @@
     <!-- 2. Estratégia -->
     <section class="panel" id="p-estrategia" role="tabpanel" aria-labelledby="tab-estrategia" hidden>
       <h2>O que o Swagger entrega (e o que não entrega)</h2>
-      <p class="lead">Reconstruir só pelo Swagger replica a casca e perde a lógica. A migração tem três camadas — o contrato é só uma delas.</p>
+      <p class="lead">Reconstruir só pelo Swagger replica a casca e perde a lógica. A migração tem três camadas — o
+        contrato é só uma delas.</p>
       <div class="grid camadas">
         <div class="card camada">
           <h3><span class="dot dot-ok"></span> Contrato</h3>
-          <p>Paths, métodos, parâmetros, schemas de request/response, auth. <strong>O Swagger entrega 100%.</strong> É o que o inventário detalha.</p>
+          <p>Paths, métodos, parâmetros, schemas de request/response, auth. <strong>O Swagger entrega 100%.</strong> É o
+            que o inventário detalha.</p>
         </div>
         <div class="card camada">
           <h3><span class="dot dot-no"></span> Regra de negócio</h3>
-          <p>Validações, orquestração, side-effects, integrações downstream. <strong>Não está no Swagger</strong> — vem da doc dos módulos EDS, código-fonte e transferência.</p>
+          <p>Validações, orquestração, side-effects, integrações downstream. <strong>Não está no Swagger</strong> — vem
+            da doc dos módulos EDS, código-fonte e transferência.</p>
         </div>
         <div class="card camada">
           <h3><span class="dot dot-part"></span> Dado persistido</h3>
-          <p>Schema real do banco, campos internos. <strong>Parcial</strong> — o Swagger só mostra o DTO de borda. Migração de dados é trilha separada.</p>
+          <p>Schema real do banco, campos internos. <strong>Parcial</strong> — o Swagger só mostra o DTO de borda.
+            Migração de dados é trilha separada.</p>
         </div>
       </div>
       <div class="notification is-success mt">
-        <span><strong>Estratégia recomendada:</strong> strangler fig (migração endpoint a endpoint, gateway roteia old/new) com <strong>contrato preservado</strong> — transparente para os ~465 mil usuários. Casa com os lotes de migração do Plano PGD-MS.</span>
+        <span><strong>Estratégia recomendada:</strong> strangler fig (migração endpoint a endpoint, gateway roteia
+          old/new) com <strong>contrato preservado</strong> — transparente para os ~465 mil usuários. Casa com os lotes
+          de migração do Plano PGD-MS.</span>
       </div>
     </section>
 
     <!-- 3. Inventário -->
     <section class="panel" id="p-inventario" role="tabpanel" aria-labelledby="tab-inventario" hidden>
       <h2>Inventário de endpoints</h2>
-      <p class="lead">Todos os endpoints do gateway. Filtre por serviço, método ou busque pelo path. É a base objetiva de "qual dado a X-VIA precisa recriar".</p>
+      <p class="lead">Todos os endpoints do gateway. Filtre por serviço, método ou busque pelo path. É a base objetiva
+        de "qual dado a X-VIA precisa recriar".</p>
 
       <div class="filtros">
         <div class="busca-wrap">
           <label class="sr-only" for="busca">Buscar por path</label>
           <span class="search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="m20 20-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
             <input id="busca" type="search" placeholder="ex.: /saude/cartao" autocomplete="off" />
           </span>
         </div>
         <div class="field">
           <label class="field-label" for="f-tag">Serviço</label>
-          <select class="field-select" id="f-tag"><option value="">Todos</option></select>
+          <select class="field-select" id="f-tag">
+            <option value="">Todos</option>
+          </select>
         </div>
         <div class="field">
           <label class="field-label" for="f-metodo">Método</label>
-          <select class="field-select" id="f-metodo"><option value="">Todos</option></select>
+          <select class="field-select" id="f-metodo">
+            <option value="">Todos</option>
+          </select>
         </div>
         <div class="acoes">
           <button class="btn btn-secondary btn-sm" id="limpar" type="button">Limpar filtros</button>
@@ -121,10 +140,13 @@
     <!-- 4. Priorização -->
     <section class="panel" id="p-prioriz" role="tabpanel" aria-labelledby="tab-prioriz" hidden>
       <h2>Priorização por serviço</h2>
-      <p class="lead">Endpoints por serviço. Na migração strangler fig, a ordem dos lotes deve cruzar este volume com os <strong>acessos do BI do APP</strong> — serviços mais usados primeiro.</p>
+      <p class="lead">Endpoints por serviço. Na migração strangler fig, a ordem dos lotes deve cruzar este volume com os
+        <strong>acessos do BI do APP</strong> — serviços mais usados primeiro.</p>
       <div class="bars" id="bars"></div>
       <div class="notification is-warning mt">
-        <span><strong>Pendente:</strong> integrar os acessos do BI <code>bench-perfil</code> para ranquear por uso real (não só por nº de endpoints). 1º e 2º serviços do lote 1 devem ser <strong>arquétipos</strong> (cobrir auth/transação), não os mais fáceis.</span>
+        <span><strong>Pendente:</strong> integrar os acessos do BI <code>bench-perfil</code> para ranquear por uso real
+          (não só por nº de endpoints). 1º e 2º serviços do lote 1 devem ser <strong>arquétipos</strong> (cobrir
+          auth/transação), não os mais fáceis.</span>
       </div>
     </section>
 
@@ -133,7 +155,8 @@
       <h2>Referências</h2>
       <p class="lead">Fontes e documentos de apoio desta análise.</p>
       <div class="refs">
-        <a class="card card-link ref-card" href="https://api.sgi.ms.gov.br/d0526/msdigital-gateway/v1/swagger#/" target="_blank" rel="noopener">
+        <a class="card card-link ref-card" href="https://api.sgi.ms.gov.br/d0526/msdigital-gateway/v1/swagger#/"
+          target="_blank" rel="noopener">
           <span>
             <span class="ref-titulo">Swagger do gateway MS Digital</span>
           </span>
@@ -176,4 +199,5 @@
   <script src="assets/js/abas.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
