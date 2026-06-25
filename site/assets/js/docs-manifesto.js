@@ -4,12 +4,7 @@
 (function () {
   "use strict";
   window.DOCS = [
-    {
-      grupo: "Repositório",
-      itens: [
-        { titulo: "README (visão geral)", doc: "docs-src/README.md" }
-      ]
-    },
+
     {
       grupo: "Estudos",
       itens: [
