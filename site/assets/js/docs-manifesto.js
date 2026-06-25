@@ -5,6 +5,12 @@
   "use strict";
   window.DOCS = [
     {
+      grupo: "Repositório",
+      itens: [
+        { titulo: "README (visão geral)", doc: "docs-src/README.md" }
+      ]
+    },
+    {
       grupo: "Estudos",
       itens: [
         { titulo: "Estratégia de migração", doc: "docs-src/02-estudos/analise-migracao-apis.md" },

@@ -1,5 +1,7 @@
 # Migração das APIs do MS Digital → X-VIA
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > Secretaria-Executiva de Transformação Digital — SETDIG
 > Levantamento e estudo da migração das APIs do gateway **MS Digital** (`msdigital-gateway`)
 > para reconstrução na plataforma da X-VIA.

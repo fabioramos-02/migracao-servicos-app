@@ -1,5 +1,7 @@
 # Priorização da Migração por Uso (BI do APP)
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > Fonte: BI `https://bench-perfil.streamlit.app/` — acessos por categoria e serviço do APP.
 > **Pendente de ingestão** (BI gated). Tabela abaixo é o template; preencher com os números reais.
 

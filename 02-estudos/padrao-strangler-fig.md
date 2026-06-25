@@ -1,5 +1,7 @@
 # Padrão Strangler Fig — o que é e por que usar nesta migração
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > SETDIG · Explicação simples do padrão escolhido para migrar as APIs do MS Digital para a X-VIA.
 
 ## 1. A ideia em uma frase

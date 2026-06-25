@@ -16,4 +16,7 @@ for dir in 00-gestao 02-estudos 04-modelagem; do
   fi
 done
 
+# README na raiz também é abrível no viewer (docs.html)
+cp README.md "$DEST/README.md" 2>/dev/null || true
+
 echo "docs sincronizados em $DEST"

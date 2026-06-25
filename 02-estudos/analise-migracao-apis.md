@@ -1,5 +1,7 @@
 # Estudo — Estratégia de Migração das APIs do MS Digital para a X-VIA
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > SETDIG · Material de apoio para a reunião com o Maycon (X-VIA)
 > Versão de trabalho — revisar com os números do Swagger e do BI quando ingeridos.
 

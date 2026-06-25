@@ -1,5 +1,7 @@
 # Pauta — Reunião de Alinhamento: Migração das APIs do MS Digital
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > **Participantes:** Fabio (SETDIG), Maycon (X-VIA) — + Duda / Dani (SETDIG) se aplicável
 > **Data:** `<a definir>`
 > **Objetivo:** alinhar como a X-VIA vai reconstruir as APIs do MS Digital — escopo, estratégia

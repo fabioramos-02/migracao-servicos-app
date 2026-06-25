@@ -1,5 +1,7 @@
 # Resumo do Gateway MS Digital
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > Fonte: `data/swagger.json` — **Gateway MS Digital** v1.9.17 (OpenAPI 2.0). Base path: `/`
 
 > Gerado automaticamente a partir do Swagger. **A tabela completa dos endpoints (filtrável e paginada) está na aba _Inventário_ do site** — não é duplicada aqui.

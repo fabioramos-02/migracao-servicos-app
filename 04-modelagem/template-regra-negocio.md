@@ -1,5 +1,7 @@
 # Ficha de Regra de Negócio por Serviço
 
+> **Autor:** Fabio Ramos · **Atualizado:** 2026-06-25 · **Versão:** v1
+
 > Preencher uma ficha por serviço **antes** de a X-VIA reconstruí-lo. Captura o que o Swagger
 > **não** carrega — a lógica por trás do contrato. Fonte: doc dos módulos do MS Digital, código-fonte,
 > sessão de transferência técnica.
