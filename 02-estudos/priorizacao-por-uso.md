@@ -18,20 +18,6 @@ dos lotes do Plano PGD-MS (lote 1 = arquétipos de maior tração).
 - **Complexidade**: 1º e 2º serviços devem ser **arquétipos** (cobrir os padrões mais difíceis:
   auth/SmartPass, pagamento, transação), não os mais fáceis — para a curva de aprendizado valer.
 
-## Ranking de serviços por acesso (preencher com o BI)
-
-| # | Categoria | Serviço | Acessos (período) | Criticidade | Lote sugerido |
-|---|---|---|---|---|---|
-| 1 | _(BI)_ | _(BI)_ | _(BI)_ | — | Lote 1 |
-| 2 | | | | | Lote 1 |
-| 3 | | | | | Lote 2 |
-| … | | | | | |
-
-## Acessos por categoria (preencher com o BI)
-
-| Categoria | Acessos (período) | % do total |
-|---|---|---|
-| _(BI)_ | | |
 
 ## Observações de método
 
