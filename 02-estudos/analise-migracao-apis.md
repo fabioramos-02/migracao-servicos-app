@@ -14,35 +14,24 @@ só pelo Swagger replica a **casca** e perde a **regra de negócio** — que nã
 | Camada | O que é | Swagger entrega? | Onde está o resto |
 |---|---|---|---|
 | **Contrato** | Paths, métodos, parâmetros, schemas de request/response, códigos de erro, auth | ✅ **Sim, 100%** | O próprio `openapi.json` |
-| **Regra de negócio** | Validações, orquestração entre serviços, side-effects, integrações downstream, máquina de estados | ❌ **Não** | Código-fonte EDS, documentação dos módulos, sessões de transferência |
+| **Regra de negócio** | Validações, orquestração entre serviços, side-effects, integrações downstream, máquina de estados | ❌ **Não** | Código-fonte do MS Digital, documentação dos módulos, sessões de transferência |
 | **Dado persistido** | Schema real do banco, campos internos não expostos, histórico | ⚠️ **Parcial** (só DTO de borda) | Banco de dados — trilha de migração de dados à parte |
 
 > **Risco nº 1:** tratar o Swagger como especificação completa. Ele é a superfície de contato.
 > "Recriar tudo" exige contrato **+** regra de negócio **+** dado **+** não-funcionais.
 
-## 3. Conexão com a documentação dos módulos EDS
-
-A regra de negócio que o Swagger não carrega é **exatamente** o que a SETDIG já está documentando
-nos módulos do ecossistema EDS (Control SSO, Admin, Atendimento, Integrador, FormFlow, CMS) —
-ver Feature 115 / PBIs 116–121 do backlog TFS. **Levar essas duas frentes juntas para o Maycon:**
-
-- **Swagger** = o quê o gateway expõe (contrato).
-- **Doc dos módulos EDS** = como cada coisa funciona por dentro (regra de negócio).
-
-Casadas, elas dão à X-VIA o material para reconstruir sem perder lógica.
-
-## 4. Estratégia recomendada: Strangler Fig (não big-bang)
+## 3. Estratégia recomendada: Strangler Fig (não big-bang)
 
 Com **~465 mil usuários ativos** e 36 serviços, migração de uma vez é risco alto demais. A
 abordagem recomendada é **strangler fig**: substituir endpoint a endpoint, com o gateway
-roteando para o serviço novo (X-VIA) ou o antigo (EDS) conforme cada um fica pronto e homologado.
+roteando para o serviço novo (X-VIA) ou o antigo (MS Digital) conforme cada um fica pronto e homologado.
 
 Vantagens:
 - Migração **incremental e reversível** — se um endpoint novo falha, roteia de volta.
 - Casa diretamente com os **lotes de migração do Plano PGD-MS** (lote 1/2/3 dos 36 serviços).
 - Permite **operação assistida** por serviço (15 dias, conforme o contrato).
 
-## 5. Decisão crítica: preservar o contrato?
+## 4. Decisão crítica: preservar o contrato?
 
 A pergunta que muda tudo na reconstrução:
 
@@ -54,7 +43,7 @@ A pergunta que muda tudo na reconstrução:
 
 > Sem essa definição fechada, não dá para dimensionar o esforço da X-VIA.
 
-## 6. O que o Swagger responde sobre "qual dado é necessário"
+## 5. O que o Swagger responde sobre "qual dado é necessário"
 
 Para cada endpoint, o `openapi.json` entrega de forma estruturada:
 
@@ -64,10 +53,11 @@ Para cada endpoint, o `openapi.json` entrega de forma estruturada:
 - **Segurança:** esquema de auth exigido por endpoint (Bearer, OAuth2, API key).
 - **Agrupamento:** tags (normalmente = módulo/serviço de negócio).
 
-Isso vira o inventário em [`../04-modelagem/inventario-endpoints.md`](../04-modelagem/inventario-endpoints.md) —
-a base objetiva da resposta "quais dados a X-VIA precisa criar".
+Isso vira o resumo em [`../04-modelagem/resumo-do-gateway.md`](../04-modelagem/resumo-do-gateway.md)
+(e a tabela completa, filtrável, na aba _Inventário_ do site) — a base objetiva da resposta
+"quais dados a X-VIA precisa criar".
 
-## 7. Riscos e dependências
+## 6. Riscos e dependências
 
 | Risco | Impacto | Mitigação |
 |---|---|---|

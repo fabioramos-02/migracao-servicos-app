@@ -24,7 +24,24 @@
         " · host " + (D.info.host || "—");
     }
     App.renderResumo(document.getElementById("kpis"), summary, D.info);
-    App.renderBarras(document.getElementById("bars"), summary.byTag);
+
+    // ---- Priorização (barras paginadas 10/página) ----
+    var elBars = document.getElementById("bars");
+    var barsInfo = document.getElementById("bars-info");
+    var barsPrev = document.getElementById("bars-prev");
+    var barsNext = document.getElementById("bars-next");
+    var paginaBars = 1;
+
+    function atualizarBarras() {
+      var r = App.renderBarras(elBars, summary.byTag, paginaBars);
+      paginaBars = r.pagina;
+      barsInfo.textContent = "Página " + r.pagina + " de " + r.totalPaginas;
+      barsPrev.disabled = r.pagina <= 1;
+      barsNext.disabled = r.pagina >= r.totalPaginas;
+    }
+    barsPrev.addEventListener("click", function () { paginaBars -= 1; atualizarBarras(); });
+    barsNext.addEventListener("click", function () { paginaBars += 1; atualizarBarras(); });
+    atualizarBarras();
 
     // ---- Selects de filtro ----
     var selTag = document.getElementById("f-tag");

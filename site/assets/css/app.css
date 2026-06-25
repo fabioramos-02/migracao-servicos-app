@@ -269,8 +269,13 @@ thead th {
 
 tbody td {
   padding: 10px 12px;
-  border-top: 1px solid var(--color-neutral-100);
+  border-top: 1px solid var(--color-neutral-200);
   vertical-align: top;
+}
+
+/* zebra striping — sem isso as linhas "somem" entre si (contraste fraco) */
+tbody tr:nth-child(even) {
+  background: var(--color-neutral-100);
 }
 
 tbody tr:hover {
@@ -307,18 +312,21 @@ code {
   display: inline-block;
 }
 
+/* Padrão de tag do DS: fundo tint + texto -700 (alto contraste / WCAG AA).
+   Fundos -500 com texto branco falham AA em texto pequeno bold (ex.: warning-500
+   #ff6200 + branco ≈ 2,6:1). POST/PUT/DELETE usam -700 sólido + branco (contraste folgado). */
 .m-GET {
   background: var(--color-info-100);
   color: var(--color-info-700);
 }
 
 .m-POST {
-  background: var(--color-success-500);
+  background: var(--color-success-700);
   color: var(--color-neutral-white);
 }
 
 .m-PUT {
-  background: var(--color-warning-500);
+  background: var(--color-warning-700);
   color: var(--color-neutral-white);
 }
 
@@ -328,7 +336,7 @@ code {
 }
 
 .m-DELETE {
-  background: var(--color-error-500);
+  background: var(--color-error-700);
   color: var(--color-neutral-white);
 }
 
@@ -339,6 +347,38 @@ code {
   border-radius: 4px;
   font-size: .78rem;
   white-space: nowrap;
+}
+
+/* ===== Tabelas dos docs (docs.html) — mesmo padrão DS da tabela do Inventário ===== */
+.docs-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  font-size: .9rem;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.docs-content th {
+  background: var(--color-primary-700);
+  color: var(--color-neutral-white);
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 12px;
+}
+
+.docs-content td {
+  padding: 9px 12px;
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.docs-content tbody tr:nth-child(even) {
+  background: var(--color-neutral-100);
+}
+
+.docs-content tbody tr:hover {
+  background: var(--color-primary-100);
 }
 
 /* ===== Paginação ===== */
@@ -372,7 +412,7 @@ code {
 
 .bar-row {
   display: grid;
-  grid-template-columns: 180px 1fr 50px;
+  grid-template-columns: 180px 1fr 96px;
   align-items: center;
   gap: 16px;
   font-size: .9rem;
@@ -429,13 +469,14 @@ code {
 }
 
 .bar-num {
-  text-align: right;
+  text-align: center;
   font-weight: 700;
   color: var(--color-primary-600);
   background: var(--color-primary-100);
   padding: 4px 8px;
   border-radius: 8px;
-  font-size: .85rem;
+  font-size: .78rem;
+  white-space: nowrap;
 }
 
 @keyframes shimmer {
@@ -449,6 +490,19 @@ code {
 }
 
 /* ===== Referências ===== */
+.refs-grupo {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-neutral-500);
+  margin: 22px 0 10px;
+  font-weight: 700;
+}
+
+.refs-grupo:first-of-type {
+  margin-top: 6px;
+}
+
 .refs {
   display: grid;
   gap: 12px;
@@ -456,19 +510,52 @@ code {
 }
 
 .ref-card {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ref-ico {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.ref-ico svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* documento interno (abre no site) × fonte externa (sai do site) */
+.ref-card--doc .ref-ico {
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+}
+
+.ref-card--ext .ref-ico {
+  background: var(--color-info-100);
+  color: var(--color-info-700);
+}
+
+.ref-card .ref-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }
 
 .ref-card .ref-titulo {
   font-weight: 700;
   color: var(--color-primary-600);
-  margin-bottom: 4px;
 }
 
-.ref-card .ref-url {
-  color: var(--color-neutral-400);
-  font-size: .78rem;
-  word-break: break-all;
+.ref-card .ref-tipo {
+  color: var(--color-neutral-500);
+  font-size: .76rem;
 }
 
 /* ===== Footer ===== */
@@ -480,6 +567,76 @@ code {
 .ds-footer .wrap {
   display: flex;
   align-items: center;
+}
+
+/* ===== Docs (docs.html): índice lateral + conteúdo ===== */
+.docs-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.docs-indice {
+  position: sticky;
+  top: 16px;
+  background: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 8px;
+  padding: 18px 16px;
+}
+
+.docs-indice h2 {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--color-neutral-500);
+  margin: 16px 0 8px;
+  font-weight: 700;
+}
+
+.docs-indice h2:first-of-type {
+  margin-top: 12px;
+}
+
+.docs-indice nav ul {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.docs-indice nav li {
+  margin-bottom: 2px;
+}
+
+.docs-indice nav a {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 4px;
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-primary-600);
+  border-left: 3px solid transparent;
+}
+
+.docs-indice nav a:hover {
+  background: var(--color-primary-100);
+}
+
+.docs-indice nav a.ativo {
+  background: var(--color-primary-100);
+  border-left-color: var(--color-primary-500);
+  font-weight: 700;
+}
+
+.docs-container {
+  background: var(--color-neutral-white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* ===== Responsivo: tabela vira cards em telas estreitas ===== */
@@ -539,12 +696,14 @@ code {
     background: transparent;
   }
 
-  tbody tr {
+  tbody tr,
+  tbody tr:nth-child(even) {
     background: var(--color-neutral-white);
     border: 1px solid var(--color-neutral-200);
     border-radius: 8px;
     margin-bottom: 12px;
     padding: 6px 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   }
 
   tbody td {
@@ -564,7 +723,7 @@ code {
 
   /* Barras (Priorização) stacked no mobile */
   .bar-row {
-    grid-template-columns: 1fr 45px;
+    grid-template-columns: 1fr 86px;
     grid-template-rows: auto auto;
     padding: 12px;
     gap: 8px;
@@ -584,7 +743,7 @@ code {
   .bar-num {
     grid-column: 2;
     grid-row: 2;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     padding: 2px 6px;
   }
 
@@ -607,5 +766,36 @@ code {
     justify-content: center;
     text-align: center;
     line-height: 1.4;
+  }
+
+  /* Docs: índice empilha acima do conteúdo (chips horizontais) */
+  .docs-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .docs-indice {
+    position: static;
+  }
+
+  .docs-indice nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .docs-indice nav li {
+    margin: 0;
+  }
+
+  .docs-indice nav a {
+    background: var(--color-neutral-100);
+    border-left: 0;
+    font-size: .8rem;
+    padding: 6px 10px;
+  }
+
+  .docs-container {
+    padding: 24px 18px;
   }
 }

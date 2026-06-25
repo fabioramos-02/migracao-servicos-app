@@ -12,15 +12,8 @@
   <link rel="stylesheet" href="assets/css/app.css" />
 
   <style>
-    .docs-container {
-      background: var(--color-neutral-white);
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      margin-top: 32px;
-      margin-bottom: 32px;
-    }
-
+    /* layout (.docs-layout / .docs-indice / .docs-container) vive em app.css.
+       Aqui só a tipografia do conteúdo Markdown renderizado. */
     .docs-content h1,
     .docs-content h2,
     .docs-content h3 {
@@ -74,22 +67,7 @@
       margin-left: 0;
     }
 
-    .docs-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 1em;
-    }
-
-    .docs-content th,
-    .docs-content td {
-      border: 1px solid var(--color-neutral-200);
-      padding: 8px 12px;
-    }
-
-    .docs-content th {
-      background: var(--color-primary-100);
-      text-align: left;
-    }
+    /* estilo de tabela (.docs-content table) vive em app.css — fonte única, igual à do Inventário */
 
     .back-link {
       display: inline-flex;
@@ -118,18 +96,21 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="docs-container">
+  <main class="wrap docs-layout">
+    <!-- Índice lateral dos documentos abríveis (gerado de docs-manifesto.js) -->
+    <aside class="docs-indice" aria-label="Índice de documentos">
       <a href="index.html" class="back-link">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
-        Voltar para o painel principal
+        Painel principal
       </a>
+      <nav id="docs-nav"></nav>
+    </aside>
 
+    <div class="docs-container">
       <div id="loading" style="padding: 40px; text-align: center; color: var(--color-neutral-500);">Carregando
         documento...</div>
-
       <div id="docs-content" class="docs-content" style="display: none;"></div>
     </div>
   </main>
@@ -139,6 +120,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="assets/js/docs-manifesto.js"></script>
   <script src="assets/js/docs.js"></script>
 </body>
 

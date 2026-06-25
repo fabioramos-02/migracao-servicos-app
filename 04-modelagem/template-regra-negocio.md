@@ -1,14 +1,14 @@
 # Ficha de Regra de Negócio por Serviço
 
 > Preencher uma ficha por serviço **antes** de a X-VIA reconstruí-lo. Captura o que o Swagger
-> **não** carrega — a lógica por trás do contrato. Fonte: doc dos módulos EDS, código-fonte,
+> **não** carrega — a lógica por trás do contrato. Fonte: doc dos módulos do MS Digital, código-fonte,
 > sessão de transferência técnica.
 
 ---
 
 ## Serviço: `<nome do serviço>`
 
-**Módulo EDS de origem:** `<Control / Admin / Atendimento / Integrador / FormFlow / CMS>`
+**Módulo MS Digital de origem:** `<Control / Admin / Atendimento / Integrador / FormFlow / CMS>`
 **Endpoints relacionados:** `<lista de paths do inventário>`
 **Owner da regra de negócio (quem responde):** `<nome / e-mail>`
 **Lote de migração:** `<1 / 2 / 3>`
@@ -45,4 +45,4 @@
 `<quais campos são pessoais/sensíveis; base legal; necessidade de consentimento>`
 
 ### 10. Pontos em aberto / gaps
-- [ ] `<dúvida a confirmar com EDS/X-VIA>`
+- [ ] `<dúvida a confirmar com MS Digital/X-VIA>`

@@ -64,7 +64,7 @@
         <div class="card camada">
           <h3><span class="dot dot-no"></span> Regra de negócio</h3>
           <p>Validações, orquestração, side-effects, integrações downstream. <strong>Não está no Swagger</strong> — vem
-            da doc dos módulos EDS, código-fonte e transferência.</p>
+            da doc dos módulos do MS Digital, código-fonte e transferência.</p>
         </div>
         <div class="card camada">
           <h3><span class="dot dot-part"></span> Dado persistido</h3>
@@ -140,9 +140,15 @@
     <!-- 4. Priorização -->
     <section class="panel" id="p-prioriz" role="tabpanel" aria-labelledby="tab-prioriz" hidden>
       <h2>Priorização por serviço</h2>
-      <p class="lead">Endpoints por serviço. Na migração strangler fig, a ordem dos lotes deve cruzar este volume com os
+      <p class="lead">Cada barra mostra <strong>quanto o serviço representa do total de endpoints (% de 100%)</strong>.
+        Na migração strangler fig, a ordem dos lotes deve cruzar este volume com os
         <strong>acessos do BI do APP</strong> — serviços mais usados primeiro.</p>
       <div class="bars" id="bars"></div>
+      <div class="paginacao">
+        <button class="btn btn-secondary btn-sm" id="bars-prev" type="button">‹ Anterior</button>
+        <span class="pag-info" id="bars-info" aria-live="polite"></span>
+        <button class="btn btn-secondary btn-sm" id="bars-next" type="button">Próxima ›</button>
+      </div>
       <div class="notification is-warning mt">
         <span><strong>Pendente:</strong> integrar os acessos do BI <code>bench-perfil</code> para ranquear por uso real
           (não só por nº de endpoints). 1º e 2º serviços do lote 1 devem ser <strong>arquétipos</strong> (cobrir
@@ -153,32 +159,86 @@
     <!-- 5. Referências -->
     <section class="panel" id="p-refs" role="tabpanel" aria-labelledby="tab-refs" hidden>
       <h2>Referências</h2>
-      <p class="lead">Fontes e documentos de apoio desta análise.</p>
+      <p class="lead">Material de apoio, separado entre <strong>documentos do projeto</strong> (abrem aqui no site) e
+        <strong>fontes externas</strong> (saem do site, abrem em nova aba).</p>
+
+      <h3 class="refs-grupo">Documentos do projeto</h3>
       <div class="refs">
-        <a class="card card-link ref-card" href="https://api.sgi.ms.gov.br/d0526/msdigital-gateway/v1/swagger#/"
-          target="_blank" rel="noopener">
-          <span>
-            <span class="ref-titulo">Swagger do gateway MS Digital</span>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/02-estudos/analise-migracao-apis.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
           </span>
-        </a>
-        <a class="card card-link ref-card" href="https://bench-perfil.streamlit.app/" target="_blank" rel="noopener">
-          <span>
-            <span class="ref-titulo">BI de uso do APP (bench-perfil)</span>
-          </span>
-        </a>
-        <a class="card card-link ref-card" href="docs.html?doc=docs-src/02-estudos/analise-migracao-apis.md">
-          <span>
+          <span class="ref-txt">
             <span class="ref-titulo">Estudo da estratégia de migração</span>
+            <span class="ref-tipo">Estudo · abre no site</span>
           </span>
         </a>
-        <a class="card card-link ref-card" href="docs.html?doc=docs-src/04-modelagem/inventario-endpoints.md">
-          <span>
-            <span class="ref-titulo">Inventário de endpoints (tabela completa)</span>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/02-estudos/padrao-strangler-fig.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">Padrão Strangler Fig (explicação + diagrama)</span>
+            <span class="ref-tipo">Estudo · abre no site</span>
           </span>
         </a>
-        <a class="card card-link ref-card" href="docs.html?doc=docs-src/00-gestao/pauta-reuniao-maycon.md">
-          <span>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/02-estudos/priorizacao-por-uso.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">Priorização por uso</span>
+            <span class="ref-tipo">Estudo · abre no site</span>
+          </span>
+        </a>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/04-modelagem/resumo-do-gateway.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">Resumo do gateway (números + serviços)</span>
+            <span class="ref-tipo">Modelagem · abre no site</span>
+          </span>
+        </a>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/04-modelagem/template-regra-negocio.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">Ficha de mapeamento de regra de negócio</span>
+            <span class="ref-tipo">Modelagem · abre no site</span>
+          </span>
+        </a>
+        <a class="card card-link ref-card ref-card--doc" href="docs.html?doc=docs-src/00-gestao/pauta-reuniao-maycon.md">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>
+          </span>
+          <span class="ref-txt">
             <span class="ref-titulo">Pauta da reunião com o Maycon</span>
+            <span class="ref-tipo">Gestão · abre no site</span>
+          </span>
+        </a>
+      </div>
+
+      <h3 class="refs-grupo">Fontes externas</h3>
+      <div class="refs">
+        <a class="card card-link ref-card ref-card--ext" href="https://api.sgi.ms.gov.br/d0526/msdigital-gateway/v1/swagger#/"
+          target="_blank" rel="noopener">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">Swagger do gateway MS Digital ↗</span>
+            <span class="ref-tipo">Link externo · exige rede gov / sessão autenticada</span>
+          </span>
+        </a>
+        <a class="card card-link ref-card ref-card--ext" href="https://bench-perfil.streamlit.app/" target="_blank" rel="noopener">
+          <span class="ref-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </span>
+          <span class="ref-txt">
+            <span class="ref-titulo">BI de uso do APP (bench-perfil) ↗</span>
+            <span class="ref-tipo">Link externo · acessos por categoria e serviço</span>
           </span>
         </a>
       </div>
