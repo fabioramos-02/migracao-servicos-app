@@ -15,3 +15,6 @@ _*.py
 # Spec capturado pode conter info sensível do gateway — versionar conscientemente.
 # Descomente para NÃO versionar o spec:
 # data/openapi.json
+
+# Gerado por scripts/sync-docs.sh (cópia dos MD pra dentro de site/, exigido pelo GitHub Pages)
+site/docs-src/

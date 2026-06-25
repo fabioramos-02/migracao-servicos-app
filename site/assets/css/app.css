@@ -210,4 +210,10 @@ code { font-family: "Cascadia Code", Consolas, monospace; font-size: .82em; colo
 
   /* Filtros */
   .filtros .acoes { margin-left: 0; width: 100%; justify-content: space-between; }
+
+  /* Footer — texto longo precisa centralizar e quebrar em linhas, não vazar */
+  .ds-footer .wrap {
+    flex-wrap: wrap; justify-content: center; text-align: center;
+    padding-top: 14px; padding-bottom: 14px; line-height: 1.4;
+  }
 }
