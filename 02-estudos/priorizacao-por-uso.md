@@ -19,8 +19,3 @@ dos lotes do Plano PGD-MS (lote 1 = arquétipos de maior tração).
   auth/SmartPass, pagamento, transação), não os mais fáceis — para a curva de aprendizado valer.
 
 
-## Observações de método
-
-- Registrar o **período** dos números (ex.: últimos 12 meses) para comparabilidade.
-- Se o BI mede APP (MS Digital), cruzar com o tráfego web (Matomo idSite=298) quando o serviço
-  existir nos dois canais — evita priorizar só pela métrica de um canal.
