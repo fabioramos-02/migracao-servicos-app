@@ -714,6 +714,67 @@ code {
 }
 
 /* ===== Responsivo: tabela vira cards em telas estreitas ===== */
+/* Inventário (7 colunas) — no desktop largo, capa o Path (paths longos + prefixo repetido)
+   p/ a tabela caber na largura do conteúdo sem scroll horizontal. Escopo .tabela-wrap. */
+@media (min-width: 1025px) {
+
+  .tabela-wrap thead th:nth-child(2),
+  .tabela-wrap tbody td:nth-child(2) {
+    max-width: 380px;
+  }
+}
+
+/* Inventário vira cards já abaixo de 1024px: 7 colunas densas não cabem sem scroll grande
+   na zona tablet/desktop-estreito. Escopo só .tabela-wrap (não afeta as tabelas dos docs). */
+@media (min-width: 721px) and (max-width: 1024px) {
+
+  .tabela-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .tabela-wrap table,
+  .tabela-wrap tbody,
+  .tabela-wrap tr,
+  .tabela-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabela-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .tabela-wrap tbody tr,
+  .tabela-wrap tbody tr:nth-child(even) {
+    background: var(--color-neutral-white);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 6px 4px;
+  }
+
+  .tabela-wrap tbody td {
+    border-top: 0;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px;
+    padding: 6px 12px;
+  }
+
+  .tabela-wrap tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--color-neutral-500);
+    font-size: .78rem;
+  }
+}
+
 @media (max-width: 720px) {
 
   /* Header flex wrap and smaller logo */
