@@ -16,16 +16,18 @@
    */
   App.renderTabela = function (tbody, itens) {
     if (!itens.length) {
-      tbody.innerHTML = '<tr><td colspan="6" class="vazio">Nenhum endpoint para o filtro atual.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" class="vazio">Nenhum endpoint para o filtro atual.</td></tr>';
       return;
     }
     var esc = App.esc;
     tbody.innerHTML = itens.map(function (e) {
+      var tipo = e.tipo || "consulta";
       return '<tr>' +
         '<td data-label="Método"><span class="m m-' + esc(e.method) + '">' + esc(e.method) + '</span></td>' +
         '<td data-label="Path"><code>' + esc(e.path) + '</code>' +
           (e.summary ? '<span class="sum">' + esc(e.summary) + '</span>' : '') + '</td>' +
         '<td data-label="Serviço"><span class="svc">' + esc(e.tag) + '</span></td>' +
+        '<td data-label="Tipo"><span class="tipo tipo-' + esc(tipo) + '">' + esc(tipo) + '</span></td>' +
         '<td data-label="Request">' + esc(requestResumo(e)) + '</td>' +
         '<td data-label="Response">' + esc(e.respSchema || '—') + '</td>' +
         '<td data-label="Auth">' + esc(e.auth) + '</td>' +

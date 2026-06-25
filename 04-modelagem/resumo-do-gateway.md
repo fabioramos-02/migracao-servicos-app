@@ -4,7 +4,7 @@
 
 > Fonte: `data/swagger.json` — **Gateway MS Digital** v1.9.17 (OpenAPI 2.0). Base path: `/`
 
-> Gerado automaticamente a partir do Swagger. **A tabela completa dos endpoints (filtrável e paginada) está na aba _Inventário_ do site** — não é duplicada aqui.
+> Gerado automaticamente a partir do Swagger por `_parse_spec.py`. **A tabela completa dos endpoints (filtrável e paginada) está na aba _Inventário_ do site** — não é duplicada aqui.
 
 ## Números do contrato
 
@@ -12,7 +12,10 @@
 - **Paths:** 117
 - **Schemas (definitions):** 310
 - **Por método:** GET 103, POST 16, PUT 1
+- **Por tipo (esforço):** consulta 106, regra 7, auth 7
 - **Esquemas de auth:** keycloak (apiKey)
+
+> A classificação por tipo separa o esforço de migração: a maioria é **consulta** (leitura, Swagger ≈ suficiente), um punhado é **regra** (precisa da ficha de regra de negócio) e alguns são **auth** (login/token, tratamento técnico à parte). Detalhe em [`classificacao-consulta-vs-regra.md`](classificacao-consulta-vs-regra.md).
 
 ## Endpoints por serviço
 
@@ -45,4 +48,3 @@ Volume por serviço — base para ordenar os lotes de migração (cruzar com os 
 ## Mapeamento da regra de negócio
 
 O Swagger entrega só o contrato. A regra de negócio de cada serviço é mapeada à parte, na ficha [`template-regra-negocio.md`](template-regra-negocio.md).
-

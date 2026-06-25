@@ -10,13 +10,15 @@
       itens: [
         { titulo: "Estratégia de migração", doc: "docs-src/02-estudos/analise-migracao-apis.md" },
         { titulo: "Padrão Strangler Fig", doc: "docs-src/02-estudos/padrao-strangler-fig.md" },
-        { titulo: "Priorização por uso", doc: "docs-src/02-estudos/priorizacao-por-uso.md" }
+        { titulo: "Priorização por uso", doc: "docs-src/02-estudos/priorizacao-por-uso.md" },
+        { titulo: "Escopo: nativo vs redirecionamento", doc: "docs-src/02-estudos/escopo-app-nativo-vs-redirecionamento.md" }
       ]
     },
     {
       grupo: "Modelagem",
       itens: [
         { titulo: "Resumo do gateway", doc: "docs-src/04-modelagem/resumo-do-gateway.md" },
+        { titulo: "Classificação consulta/regra/auth", doc: "docs-src/04-modelagem/classificacao-consulta-vs-regra.md" },
         { titulo: "Ficha de regra de negócio", doc: "docs-src/04-modelagem/template-regra-negocio.md" }
       ]
     },

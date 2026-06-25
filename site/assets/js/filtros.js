@@ -6,17 +6,19 @@
 
   /**
    * @param {Array} endpoints  lista completa
-   * @param {{busca?:string, tag?:string, metodo?:string}} criterios
-   * @returns {Array} subconjunto que satisfaz tag E método E busca
+   * @param {{busca?:string, tag?:string, metodo?:string, tipo?:string}} criterios
+   * @returns {Array} subconjunto que satisfaz tag E método E tipo E busca
    */
   App.filtrar = function (endpoints, criterios) {
     var q = (criterios.busca || "").trim().toLowerCase();
     var tag = criterios.tag || "";
     var metodo = criterios.metodo || "";
+    var tipo = criterios.tipo || "";
 
     return endpoints.filter(function (e) {
       if (tag && e.tag !== tag) return false;
       if (metodo && e.method !== metodo) return false;
+      if (tipo && e.tipo !== tipo) return false;
       if (q) {
         var alvo = (e.path + " " + (e.summary || "")).toLowerCase();
         if (alvo.indexOf(q) === -1) return false;

@@ -24,6 +24,7 @@
         " · host " + (D.info.host || "—");
     }
     App.renderResumo(document.getElementById("kpis"), summary, D.info);
+    App.renderTipos(document.getElementById("tipos"), summary.byTipo);
 
     // ---- Priorização (barras paginadas 10/página) ----
     var elBars = document.getElementById("bars");
@@ -53,9 +54,14 @@
     Object.keys(summary.byMethod || {}).forEach(function (m) {
       selMet.insertAdjacentHTML("beforeend", '<option value="' + App.esc(m) + '">' + App.esc(m) + "</option>");
     });
+    var selTipo = document.getElementById("f-tipo");
+    Object.keys(summary.byTipo || {}).forEach(function (t) {
+      selTipo.insertAdjacentHTML("beforeend",
+        '<option value="' + App.esc(t) + '">' + App.esc(t) + " (" + summary.byTipo[t] + ")</option>");
+    });
 
     // ---- Estado + elementos ----
-    var estado = { busca: "", tag: "", metodo: "", pagina: 1 };
+    var estado = { busca: "", tag: "", metodo: "", tipo: "", pagina: 1 };
     var inputBusca = document.getElementById("busca");
     var tbody = document.getElementById("tbody");
     var contador = document.getElementById("count");
@@ -81,9 +87,10 @@
     inputBusca.addEventListener("input", resetPagina(function () { estado.busca = inputBusca.value; }));
     selTag.addEventListener("change", resetPagina(function () { estado.tag = selTag.value; }));
     selMet.addEventListener("change", resetPagina(function () { estado.metodo = selMet.value; }));
+    selTipo.addEventListener("change", resetPagina(function () { estado.tipo = selTipo.value; }));
     btnLimpar.addEventListener("click", function () {
-      estado = { busca: "", tag: "", metodo: "", pagina: 1 };
-      inputBusca.value = ""; selTag.value = ""; selMet.value = "";
+      estado = { busca: "", tag: "", metodo: "", tipo: "", pagina: 1 };
+      inputBusca.value = ""; selTag.value = ""; selMet.value = ""; selTipo.value = "";
       atualizar();
     });
     btnPrev.addEventListener("click", function () { estado.pagina -= 1; atualizar(); });
